@@ -1,6 +1,39 @@
-# valiantlauncher
+<div align="center">
 
-## Project setup
+<img src="" align="center" alt="Logo">
+
+
+<strong> <i>A custom minecraft launcher </i> </strong>
+
+<hr>
+
+<br>
+
+<a href="https://github.com/valiantdnd/Launcher">
+    <img src="https://img.shields.io/github/languages/top/valiantdnd/Launcher.svg?colorB=f0db4f&style=for-the-badge" alt="Language">
+</a>
+
+<a href="https://github.com/valiantdnd/Launcher">
+    <img src="https://img.shields.io/github/package-json/v/valiantdnd/Launcher.svg?colorB=Orange&style=for-the-badge" alt="Version">
+</a>
+
+<a href="https://github.com/valiantdnd/Launcher/issues">
+    <img src="https://img.shields.io/github/issues/valiantdnd/Launcher.svg?style=for-the-badge&colorB=37f149" alt="Issues">
+</a>
+
+<br>
+
+<a href="https://github.com/valiantdnd/Launcher/pulls">
+    <img src="https://img.shields.io/github/issues-pr/valiantdnd/Launcher.svg?style=for-the-badge&colorB=37f149" alt="Pull Request">
+</a>
+<hr>
+</div>
+
+
+## Project Setup
+<details> <summary> Click Me</summary>
+
+### Install the dependencies
 ```
 npm install
 ```
@@ -26,4 +59,14 @@ npm run lint
 ```
 
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+</details>
+
+## Author
+
+**Launcher** © [Savvy](https://github.com/Savvy).  
+Authored and maintained by Savvy.
+
+> GitHub [@Savvy](https://github.com/Savvy)
