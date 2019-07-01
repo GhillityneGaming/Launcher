@@ -8,9 +8,8 @@
 <hr>
 
 <br>
-
 <a href="https://github.com/valiantdnd/Launcher">
-    <img src="https://img.shields.io/github/languages/top/valiantdnd/Launcher.svg?colorB=f0db4f&style=for-the-badge" alt="Language">
+    <img src="https://img.shields.io/github/languages/top/valiantdnd/Launcher.svg?color=%237382f7&style=for-the-badge" alt="Language">
 </a>
 
 <a href="https://github.com/valiantdnd/Launcher">
