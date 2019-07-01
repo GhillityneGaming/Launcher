@@ -1,31 +1,68 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Header />
     <router-view/>
+    <div class="container">
+      <div id="status">
+        <MojangStatus />
+      </div>
+      <Nav />
+    </div>
   </div>
 </template>
 
+<script>
+import Header from '@/components/common/Header';
+import Nav from '@/components/common/Nav';
+import MojangStatus from '@/components/MojangStatus';
+export default {
+  components: {
+    Header,
+    Nav,
+    MojangStatus
+  }
+}
+</script>
+
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html, body, #app {
+  min-height: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  padding: 0px;
+  margin: 0px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+body {
+  background: #212121 url('./assets/Background 1.png') no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+.container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+#status {
+  position: fixed;
+  left: 25px;
+}
+
+#app {
+  text-align: center;
+  color: #eee;
 }
 </style>
