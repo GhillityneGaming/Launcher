@@ -1,6 +1,6 @@
 <div align="center">
-
-<img src="https://i.imgur.com/FBhdHKk.png" align="center" alt="Logo">
+ <img src="https://i.imgur.com/FBhdHKk.png" align="center">
+<br>
 <br>
 
 <strong> <i>A custom minecraft launcher </i> </strong>
