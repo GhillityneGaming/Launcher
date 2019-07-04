@@ -1,6 +1,6 @@
 <template>
     <div id="title-bar">
-        <div id="title"><span>ValiantLauncher</span></div>
+        <div id="title"><img src="@/assets/icon.png" alt=""><span>ValiantLauncher</span></div>
         <div id="title-bar-btns">
            <button id="min-btn" v-on:click="minimize"><span>&#xE921;</span></button>
            <button id="max-btn" v-on:click="maximize" ref="maximizeBtn"><span>&#xE922;</span></button>
@@ -44,14 +44,16 @@ export default {
 }
 </script>
 
-
 <style scoped>
 #title-bar {
+    display: block;
     -webkit-app-region: drag;
     height: 35px; 
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: none;
+    padding: 0;
     margin: 0px; 
+    z-index: 1000;
 }
 
 #title {
@@ -62,6 +64,11 @@ export default {
     font-size: 14px;
     margin-left: 15px;
     overflow-x: hidden;
+}
+
+#title img {
+    width: 25px;
+    margin-right: 5px;
 }
 
 #title span {

@@ -1,12 +1,11 @@
 <template>
   <div id="app">
     <Header />
-    <router-view/>
     <div class="container">
-      <div id="status">
-        <MojangStatus />
-      </div>
       <Nav />
+    </div>
+    <div id="content">
+      <router-view/>
     </div>
   </div>
 </template>
@@ -14,18 +13,34 @@
 <script>
 import Header from '@/components/common/Header';
 import Nav from '@/components/common/Nav';
-import MojangStatus from '@/components/MojangStatus';
 export default {
   components: {
     Header,
-    Nav,
-    MojangStatus
+    Nav
   }
 }
 </script>
 
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align:
+  baseline;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 html, body, #app {
   min-height: 100% !important;
   height: 100% !important;
@@ -45,15 +60,21 @@ body {
   overflow: hidden;
 }
 
+#content {
+  z-index: 1;
+  height: calc(100% - 35px);
+  margin-top: 35px;
+  padding: 20px;
+}
 
 .container {
   position: absolute;
-  bottom: 0;
   width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: inherit;
 }
 
 #status {

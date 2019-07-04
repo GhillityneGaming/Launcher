@@ -1,5 +1,5 @@
 <template>
-    <button id="btn">{{ text }}</button>
+    <button class="btn">{{ text }}</button>
 </template>
 
 
@@ -12,11 +12,13 @@ export default {
 </script>
 
 <style>
-#btn {
+.btn {
     font-family: 'Lato';
     font-weight: 500;
     text-transform: uppercase;
-    padding: 15px 150px;
+    box-sizing: border-box;
+    /* padding: 15px 150px; */
+    padding: 1rem 9.4rem !important;
     background: transparent;
     border: none;
     color: #fff;
@@ -28,7 +30,7 @@ export default {
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-#btn:hover {
+.btn:hover {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     opacity: 1;
 }

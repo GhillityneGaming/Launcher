@@ -1,9 +1,11 @@
 <template>
   <div class="home">
-    <h1>Logged In As...</h1>
     <UserContainer v-bind:allowSwitch="false" uniqueId="7fe6c6a8659a4a75ba7fca364f6cfa57"/>
     <div class="launch">
       <GradientButton text="Launch Game"/>
+      <span id="cog">
+      <img src="@/assets/settings_cog.png">
+      </span>
     </div>
   </div>
 </template>
@@ -31,19 +33,32 @@ h1 {
 }
 
 .home {
-  height: 100%;
-  display: flex;
+  display: -webkit-box;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-#main-logo {
-  width: 250px;
+  z-index: inherit;
+  height: inherit;
 }
 
 .launch {
   margin-top: 50px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#cog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  cursor: pointer;
+}
+#cog img {
+  width: 30.5px;
+  height: 30.5px;
+  pointer-events: none;
 }
 
 </style>

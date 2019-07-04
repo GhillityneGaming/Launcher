@@ -27,6 +27,10 @@ export default {
     border: 1px solid #fff;
 }
 
+.box img {
+    pointer-events: none;
+}
+
 h5 {
     font-family: 'Lato';
     font-weight: 700;

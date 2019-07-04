@@ -1,6 +1,7 @@
 'use strict'
 
 import { app, protocol, BrowserWindow } from 'electron'
+import path from 'path';
 import {
     createProtocol,
     installVueDevtools
@@ -22,6 +23,7 @@ function createWindow() {
         autoHideMenuBar: true,
         frame: false,
         backgroundColor: '#212121',
+        icon: path.join(__dirname, '/assets/icon.png'),
         webPreferences: {
             //devTools: false,
             webSecurity: false, // TODO: Disable this for production

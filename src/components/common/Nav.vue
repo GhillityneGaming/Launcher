@@ -4,14 +4,16 @@
         <li class="">News</li>
         <li class="">Profiles</li>
         <li class="">Skins</li>
-      </ul>
+    </ul>
 </template>
 
 <style>
 .nav {
+    display: block;
     margin: 0;
     list-style-type: none;
     padding: 0;
+    z-index: 999;
 }
 
 .nav li {
@@ -20,8 +22,9 @@
     text-transform: uppercase;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 1.2rem;
-    transition: transform .2s ease-in-out;
+    /* font-size: 1.2rem; */
+    font-size: calc(14px + 3.5 * ((100vw - 320px) / 670));
+    transition: background .2s ease-in-out;
     cursor: pointer;
     float: left;
 }
@@ -31,7 +34,7 @@
 }
 
 .nav li:hover {
-    transform: scale(1.1); 
+    background: rgba(0, 0, 0, 0.50);
 }
 
 .nav li:not(:last-child) {
