@@ -11,18 +11,18 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .btn {
     font-family: 'Lato';
     font-weight: 500;
     text-transform: uppercase;
     box-sizing: border-box;
-    /* padding: 15px 150px; */
-    padding: 1rem 9.4rem !important;
+    padding: 1rem 9.4rem;
     background: transparent;
     border: none;
     color: #fff;
     font-size: 1.5rem;
+    font-size: calc(1.5rem - 3.5 * ((100vw - 320px) / 670));
     opacity: 0.8;
     cursor: pointer;
     background-image: linear-gradient(to right, #00c6ff, #0072ff);

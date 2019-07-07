@@ -55,20 +55,17 @@ html, body, #app {
 }
 
 body {
-  background: #212121 url('./assets/Background 1.png') no-repeat center;
+  background: #212121 url('./assets/backgrounds/1.png') no-repeat center;
   background-size: cover;
   overflow: hidden;
 }
 
 #content {
   z-index: 1;
-  height: calc(100% - 35px);
-  margin-top: 35px;
-  padding: 20px;
+  flex: 1 1 0;
 }
 
 .container {
-  position: absolute;
   width: 100%;
   text-align: center;
   display: flex;
@@ -85,5 +82,7 @@ body {
 #app {
   text-align: center;
   color: #eee;
+  display: flex;
+  flex-direction: column;
 }
 </style>
