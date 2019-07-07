@@ -58,12 +58,11 @@ ul li:hover {
 }
 
 @media screen and (max-width: 768px) {
-    nav {
-    }
     nav ul {
         display: block;
         padding: 0;
     }
+    
     ul li {
         width: 100%;
     }

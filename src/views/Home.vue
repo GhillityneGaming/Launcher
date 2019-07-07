@@ -2,7 +2,15 @@
   <div class="home">
     <UserContainer v-bind:allowSwitch="true" uniqueId="7fe6c6a8659a4a75ba7fca364f6cfa57"/>
     <div class="launch">
-      <TransparentButton image="https://i.imgur.com/56iQxhC.png" text="LabyMod 1.14.2 (LabyMod 1.14.2)" icon="chevron-down" />
+      <div class="dropdown">
+      <TransparentButton v-on:click.native="toggleDropdown" image="https://i.imgur.com/56iQxhC.png" text="LabyMod 1.14.2 (LabyMod 1.14.2)" icon="chevron-down" />
+      <ul class="dropdown-content">
+        <li><img src="https://i.imgur.com/56iQxhC.png" alt="">LabyMod 1.14.2 (LabyMod 1.14.2)</li>
+        <li><img src="https://i.imgur.com/56iQxhC.png" alt="">LabyMod 1.14.2 (LabyMod 1.14.2)</li>
+        <li><img src="https://i.imgur.com/56iQxhC.png" alt="">LabyMod 1.14.2 (LabyMod 1.14.2)</li>
+        <li><img src="https://i.imgur.com/56iQxhC.png" alt="">LabyMod 1.14.2 (LabyMod 1.14.2)</li>
+      </ul>
+      </div>
       <GradientButton text="Launch Game" />
     </div>
     <MojangStatus />
@@ -23,6 +31,12 @@ export default {
     TransparentButton,
     GradientButton,
     MojangStatus
+  },
+  methods: {
+    toggleDropdown: function() {
+      console.log('Test');
+      this.$el.querySelector('.dropdown-content').classList.toggle('show');
+    }
   }
 }
 </script>
@@ -70,6 +84,49 @@ h1 {
   width: 30.5px;
   height: 30.5px;
   pointer-events: none;
+}
+
+.dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #191919;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family: 'Lato';
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.show {
+  display:block;
+}
+
+.dropdown-content li {
+  position: relative;
+  color: #ddd;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropdown-content li:hover {
+  background-color: #212121
+}
+
+.dropdown-content li img {
+    width: 32px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 8%;
 }
 
 </style>
