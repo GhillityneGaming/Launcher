@@ -1,11 +1,13 @@
 <template>
-    <button class="btn">{{ text }} <span><font-awesome-icon v-bind:icon="faIcon" /></span></button>
+    <button class="btn"><img v-bind:src="image" alt=""> {{ text }} <span><font-awesome-icon v-bind:icon="faIcon" /></span></button>
 </template>
 
 
 <script>
+import { URL } from 'url';
 export default {
     props: {
+        image: URL,
         text: String,
         icon: String
     },
@@ -44,10 +46,18 @@ export default {
     opacity: 1;
 }
 
+.btn img {
+    width: 32px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 8%;
+}
+
 .btn span {
     position: absolute;
-   top: 50%;
-   transform: translate(-50%,-50%);
-   right: 2%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    right: 2%;
 }
 </style>

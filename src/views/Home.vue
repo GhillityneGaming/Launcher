@@ -2,7 +2,7 @@
   <div class="home">
     <UserContainer v-bind:allowSwitch="true" uniqueId="7fe6c6a8659a4a75ba7fca364f6cfa57"/>
     <div class="launch">
-      <TransparentButton text="LabyMod 1.14.2 (LabyMod 1.14.2)" icon="chevron-down" />
+      <TransparentButton image="https://i.imgur.com/56iQxhC.png" text="LabyMod 1.14.2 (LabyMod 1.14.2)" icon="chevron-down" />
       <GradientButton text="Launch Game" />
     </div>
     <MojangStatus />
