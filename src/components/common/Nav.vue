@@ -1,13 +1,27 @@
 <template>
     <nav>
         <ul class="nav">
-            <li class="active">Play</li>
-            <li class="">News</li>
-            <li class="">Profiles</li>
-            <li class="">Settings</li>
+            <li class="active" v-on:click="navigate($event, '/')">Play</li>
+            <li class="" v-on:click="navigate($event, '/news')">News</li>
+            <li class="" v-on:click="navigate($event, '/profiles')">Profiles</li>
+            <li class="" v-on:click="navigate($event, '/settings')">Settings</li>
         </ul>
     </nav>
 </template>
+
+<script>
+import router from '@/router';
+export default {
+    methods: {
+        navigate: function(event, path) {
+            this.$el.querySelector('.active').classList.remove('active');
+            event.target.classList.add('active');
+            router.push(path);
+        }
+    }
+}
+</script>
+
 
 <style scoped>
 nav {
@@ -45,7 +59,6 @@ ul li:hover {
 
 @media screen and (max-width: 768px) {
     nav {
-        margin-bottom: 25px;
     }
     nav ul {
         display: block;

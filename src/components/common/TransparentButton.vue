@@ -4,10 +4,9 @@
 
 
 <script>
-import { URL } from 'url';
 export default {
     props: {
-        image: URL,
+        image: String,
         text: String,
         icon: String
     },

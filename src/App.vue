@@ -5,7 +5,9 @@
       <Nav />
     </div>
     <div id="content">
-      <router-view/>
+      <vue-page-transition name="fade">
+        <router-view/>
+      </vue-page-transition>
     </div>
   </div>
 </template>
@@ -63,6 +65,10 @@ body {
 #content {
   z-index: 1;
   flex: 1 1 0;
+}
+
+#content > div {
+  height: 100%;
 }
 
 .container {
